@@ -37,34 +37,28 @@ html {
 }
 
 .notice-text {
-  position: absolute;
+  position: relative;
   width: 88px;
   height: 90px;
-
   font-family: "VT323";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  /* or 111% */
-
-  display: flex;
-  align-items: center;
   text-align: right;
   letter-spacing: -0.02em;
-
   color: #ec0000;
+  left: 295px;
+  bottom: 260px;
 }
 
 .notice-png {
-  position: absolute;
-  width: 56.75px;
-  height: 75.56px;
-
-  background: url(toppng.png);
+  position: relative;
   mix-blend-mode: color-burn;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transform: matrix(1, -0.02, 0.02, 1, 0, 0);
+  left: 390px;
+  bottom: 359px;
 }
 
 .header-2 {
@@ -487,4 +481,30 @@ html {
   background-blend-mode: color-burn;
   mix-blend-mode: color-burn;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.coded-text {
+  position: relative;
+  font-family: "VT323";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+  color: #ec0000;
+  bottom: 360px;
+  left: 715px;
+}
+
+.coded-img {
+  position: relative;
+  mix-blend-mode: color-burn;
+  left: 680px;
+  bottom: 384px;
+  width: 0px;
+}
+
+.coded-text a {
+  color: inherit;
 }
