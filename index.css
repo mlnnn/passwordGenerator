@@ -15,20 +15,16 @@ html {
 
 .header {
   height: 200px;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
-.header-1 {
+.header-title {
   position: relative;
-  left: 295px;
-  bottom: 145px;
-  width: 500px;
+  left: 34.5%;
+  bottom: 69.5%;
+  width: 65%;
   height: 179px;
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 54px;
-  line-height: 45px;
+  font: normal 400 54px/45px "VT323";
   text-align: right;
   letter-spacing: -0.03em;
   color: #7b2121;
@@ -36,15 +32,25 @@ html {
   text-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-.notice-text {
+.header-side {
+  position: relative;
+  left: 5px;
+  top: 20px;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  border: 2px dashed #820e0e;
+  mix-blend-mode: normal;
+  font: normal 400 35px/30px "VT323";
+  letter-spacing: -0.02em;
+  color: #b90000;
+}
+
+.notice-box {
   position: relative;
   width: 88px;
   height: 90px;
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
+  font: 400 18px/20px "VT323";
   text-align: right;
   letter-spacing: -0.02em;
   color: #ec0000;
@@ -59,26 +65,6 @@ html {
   transform: matrix(1, -0.02, 0.02, 1, 0, 0);
   left: 390px;
   bottom: 359px;
-}
-
-.header-2 {
-  position: relative;
-  left: 5px;
-  top: 20px;
-  mix-blend-mode: normal;
-  border: 2px dashed #820e0e;
-  padding: 10px;
-  position: relative;
-  right: 2px;
-  width: 250px;
-  height: 150px;
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-  color: #b90000;
 }
 
 .highlight-header {
@@ -98,20 +84,18 @@ html {
   top: 5px;
   border: 2px dashed rgba(130, 14, 14, 0.99);
   padding: 20px;
-  margin-left: 25px;
+  margin: 0 0 0 25px;
 }
 
-.password-length {
+.password-length-option {
   position: absolute;
   width: 230px;
   height: 55px;
-
   font-family: "VT323";
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 30px;
-  /* or 86% */
   color: #000000;
 }
 
@@ -121,13 +105,12 @@ html {
 
 .icons {
   font-size: 23px;
-  color: #b90000;
-  position: absolute;
   font-weight: bold;
-  left: 350px;
-  top: 12px;
-  cursor: pointer;
+  position: absolute;
   line-height: 1px;
+  top: 12px;
+  left: 350px;
+  cursor: pointer;
 }
 
 @-webkit-keyframes swing {
@@ -190,6 +173,9 @@ html {
 }
 
 .length {
+  position: relative;
+  left: 235px;
+  bottom: 49px;
   width: 110px;
   height: 45px;
   color: #f6cb59;
@@ -197,15 +183,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: 235px;
-  bottom: 49px;
 }
 
-.uppercase {
+.shared-options {
   position: absolute;
-  top: 105px;
-
   width: 160px;
   height: 34px;
 
@@ -214,176 +195,97 @@ html {
   font-weight: 400;
   font-size: 35px;
   line-height: 25px;
-  /* or 71% */
 }
 
-.lowercase {
-  position: absolute;
+.uppercase-option {
+  top: 105px;
+}
+
+.lowercase-option {
   top: 105px;
   left: 230px;
-
-  width: 160px;
-  height: 34px;
-
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 25px;
-  /* or 71% */
 }
 
-.numbers {
-  position: absolute;
+.numbers-option {
   top: 210px;
-
-  width: 160px;
-  height: 34px;
-
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 25px;
-  /* or 71% */
 }
 
-.symbols {
-  position: absolute;
+.symbols-option {
   top: 210px;
   left: 230px;
-
-  width: 160px;
-  height: 34px;
-
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 25px;
-  /* or 71% */
 }
 
-#generate {
+.generate-button,
+.clear-button {
   font-family: "VT323";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 24px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   gap: 12px;
-
   position: absolute;
   width: 165px;
   height: 60px;
-
   top: 290px;
-
-  background: #b90000;
+  cursor: pointer;
+  background-color: #b90000;
   color: #f6cb59;
   border: none;
-
-  transition-duration: 0.4s;
-  cursor: pointer;
-  /* shadow/sm */
 }
 
-#generate:hover {
-  background-color: #ec0000;
-  color: #ffd76f;
-}
-
-#clear {
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  gap: 12px;
-  position: absolute;
-  width: 165px;
-  height: 60px;
-  top: 290px;
+.clear-button {
   left: 230px;
-  background: #b90000;
-  color: #f6cb59;
-  border: none;
-
-  transition-duration: 0.4s;
-  cursor: pointer;
-  /* shadow/sm */
 }
 
-#clear:hover {
+.generate-button:hover,
+.clear-button:hover {
   background-color: #ec0000;
   color: #ffd76f;
+  transition-duration: 0.4s;
 }
 
-#result1 {
+.result {
   position: absolute;
   top: 370px;
   width: 165px;
   height: 38px;
   transition-duration: 0.4s;
-
   background: #4e2828;
   color: #ffeab2;
   font-size: 25px;
-}
-
-#result1:hover {
-  background-color: #862525;
-  color: #ffffff;
 }
 
 #result2 {
-  position: absolute;
-  top: 370px;
   left: 230px;
-  width: 165px;
-  height: 38px;
-  transition-duration: 0.4s;
-
-  background: #4e2828;
-  color: #ffeab2;
-  font-size: 25px;
 }
 
-#result2:hover {
+.result:hover {
   background-color: #862525;
   color: #ffffff;
 }
 
 .check-uppercase {
-  position: absolute;
   left: 140px;
   top: 112px;
 }
 
 .check-lowercase {
-  position: absolute;
   left: 350px;
-  top: 80px;
+  top: 81px;
 }
 
 .check-numbers {
-  position: absolute;
   left: 140px;
   top: 140px;
 }
 
 .check-symbols {
-  position: absolute;
   left: 350px;
-  top: 107px;
+  top: 108.6px;
 }
 
 .b-contain *,
@@ -414,8 +316,6 @@ html {
 
 .b-contain input[type="checkbox"] ~ .b-input {
   position: absolute;
-  top: 0;
-  left: 0;
   height: 1.3rem;
   width: 1.3rem;
   background: F6CB59;
@@ -477,10 +377,17 @@ html {
   top: -410px;
   left: 470px;
   height: 340px;
-
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-blend-mode: color-burn;
   mix-blend-mode: color-burn;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.coded-img {
+  position: relative;
+  mix-blend-mode: color-burn;
+  left: 677px;
+  bottom: 384px;
+  width: 0px;
 }
 
 .coded-text {
@@ -491,18 +398,9 @@ html {
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.02em;
-
   color: #ec0000;
   bottom: 360px;
-  left: 715px;
-}
-
-.coded-img {
-  position: relative;
-  mix-blend-mode: color-burn;
-  left: 680px;
-  bottom: 384px;
-  width: 0px;
+  left: 710px;
 }
 
 .coded-text a {
