@@ -47,12 +47,12 @@
                     <div class="highlight-main">password length</div>:
                 </div>
                 <div class="parent">
-                    <div class="length">
+                    <div id="length" class="length">
                         15
                     </div>
                     <div class="icons">
-                        <i id="icon-up" class="bi bi-chevron-up swing"></i>
-                        <i id="icom-down" class="bi bi-chevron-down swing"></i>
+                        <i id="icon-up" class="bi bi-chevron-up swing" onclick="incrementLength()"></i>
+                        <i id="icom-down" class="bi bi-chevron-down swing" onclick="decrementLength()"></i>
                     </div>
                 </div>
             </div>
@@ -80,39 +80,39 @@
 
             <label class="b-contain">
 
-                <input type="checkbox" />
+                <input type="checkbox" id="uppercase" value="yes" checked autocomplete="off"/>
                 <span class="b-input check-uppercase"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" />
+                <input type="checkbox" id="lowercase" value="yes" checked autocomplete="off"/>
                 <span class="b-input check-lowercase"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" />
+                <input type="checkbox" id="numbers" value="yes" checked autocomplete="off"/>
                 <span class="b-input check-numbers"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" />
+                <input type="checkbox" id="symbols" value="yes" checked autocomplete="off"/>
                 <span class="b-input check-symbols"></span>
             </label>
 
             <div class="buttons">
-                <button class="generate-button" onclick="generate()">
+                <button class="generate-button" onclick="generatePasswords()">
                     Generate!
                 </button>
 
-                <button class="clear-button" onclick="clear()">
+                <button class="clear-button" onclick="clearPasswords()">
                     Clear 'em out!
                 </button>
 
             </div>
 
             <div class="results">
-                <div id="result1" class="result"></div>
-                <div id="result2" class="result"></div>
+                <div id="result1" class="result" onclick="copyPassword1"></div>
+                <div id="result2" class="result" onclick="copyPassword2"></div>
             </div>
 
         </div>

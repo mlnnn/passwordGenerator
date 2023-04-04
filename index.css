@@ -245,7 +245,7 @@ html {
 .clear-button:hover {
   background-color: #ec0000;
   color: #ffd76f;
-  transition-duration: 0.4s;
+  transition: 0.4s cubic-bezier(0.7, 0.11, 0.58, 1);
 }
 
 .result {
