@@ -127,15 +127,22 @@ function generatePasswords() {
 }
 
 function renderPasswords() {
-  result1El.value = "";
-  result2El.value = "";
-  const length = +lengthEl.value;
-  const hasLowercase = lowercaseEl.checked;
+  result1El.textContent = "";
+  result2El.textContent = "";
+  const length = parseInt(lengthEl.textContent.trim());
+  // Gets the length of the password from the length input field and converts it to a number
+  const hasLowercase = lowercaseEl.checked; // Checks which types of characters (lowercase, uppercase, numbers, and symbols) the user wants to include in the password
   const hasUppercase = uppercaseEl.checked;
   const hasNumbers = numbersEl.checked;
   const hasSymbols = symbolsEl.checked;
 
-  let passwordArray = [];
+  if (!hasLowercase && !hasUppercase && !hasNumbers && !hasSymbols) {
+    result1El.textContent = "ERROR";
+    result2El.textContent = "ERROR";
+    return;
+  }
+
+  let passwordArray = []; // Creates an empty array passwordArray which will hold all the possible characters that can be included in the password based on the user's choices
 
   if (hasLowercase) {
     passwordArray = passwordArray.concat(lowerCharacters);
@@ -154,18 +161,34 @@ function renderPasswords() {
     let randomPassword1 = Math.floor(Math.random() * passwordArray.length);
     let randomPassword2 = Math.floor(Math.random() * passwordArray.length);
 
-    result1El.value += passwordArray[randomPassword1];
-    result2El.value += passwordArray[randomPassword2];
+    result1El.textContent += passwordArray[randomPassword1];
+    result2El.textContent += passwordArray[randomPassword2];
   }
 }
 
 function clearPasswords() {
-  result1El.value = "";
-  result2El.value = "";
+  result1El.textContent = "";
+  result2El.textContent = "";
 }
 
 function copyPassword1() {
-  password1El.select();
-  document.execCommand("copy");
-  alert("First Password copied to clipboard!");
+  const password1 = result1El.textContent.trim(); // Get the password from the result1 element
+  if (password1) {
+    navigator.clipboard
+      .writeText(password1) // Copy the password to the clipboard
+      .then(() => {
+        alert("password copied to clipboard!");
+      });
+  }
+}
+
+function copyPassword2() {
+  const password2 = result2El.textContent.trim();
+  if (password2) {
+    navigator.clipboard
+      .writeText(password2) // Copy the password to the clipboard
+      .then(() => {
+        alert("password copied to clipboard!");
+      });
+  }
 }

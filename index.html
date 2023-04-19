@@ -80,22 +80,22 @@
 
             <label class="b-contain">
 
-                <input type="checkbox" id="uppercase" value="yes" checked autocomplete="off"/>
+                <input type="checkbox" id="uppercase" value="yes"/>
                 <span class="b-input check-uppercase"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" id="lowercase" value="yes" checked autocomplete="off"/>
+                <input type="checkbox" id="lowercase" value="yes"/>
                 <span class="b-input check-lowercase"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" id="numbers" value="yes" checked autocomplete="off"/>
+                <input type="checkbox" id="numbers" value="yes"/>
                 <span class="b-input check-numbers"></span>
             </label>
 
             <label class="b-contain">
-                <input type="checkbox" id="symbols" value="yes" checked autocomplete="off"/>
+                <input type="checkbox" id="symbols" value="yes"/>
                 <span class="b-input check-symbols"></span>
             </label>
 
@@ -111,14 +111,14 @@
             </div>
 
             <div class="results">
-                <div id="result1" class="result" onclick="copyPassword1"></div>
-                <div id="result2" class="result" onclick="copyPassword2"></div>
+                <div id="result1" class="result" onclick="copyPassword1()"></div>
+                <div id="result2" class="result" onclick="copyPassword2()"></div>
             </div>
 
         </div>
 
         <div class="main-gif">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/602/original/sailor-moon.gif?1678799624" alt="a gif of sailor moon fighting"
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/602/original/sailor-moon.gif?1678799624"
                 alt="Sailor Moon fighting" class="gif">
         </div>
 
@@ -132,6 +132,9 @@
              </div>
 
         </div>
+
+        <p id="errorEl1">copied meow!</p>
+        <p id="errorEl2">copied meow!</p>
     
 
 
