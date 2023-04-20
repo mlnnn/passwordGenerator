@@ -108,6 +108,9 @@ let symbolsEl = document.getElementById("symbols");
 let incrementBtn = document.getElementById("icon-up");
 let decrementBtn = document.getElementById("icon-down");
 
+const copied1El = document.querySelector("#copied1");
+const copied2El = document.querySelector("#copied2");
+
 function incrementLength() {
   if (length < 15) {
     length += 1;
@@ -129,6 +132,8 @@ function generatePasswords() {
 function renderPasswords() {
   result1El.textContent = "";
   result2El.textContent = "";
+  copied1El.textContent = "";
+  copied2El.textContent = "";
   const length = parseInt(lengthEl.textContent.trim());
   // Gets the length of the password from the length input field and converts it to a number
   const hasLowercase = lowercaseEl.checked; // Checks which types of characters (lowercase, uppercase, numbers, and symbols) the user wants to include in the password
@@ -169,6 +174,8 @@ function renderPasswords() {
 function clearPasswords() {
   result1El.textContent = "";
   result2El.textContent = "";
+  copied1El.textContent = "";
+  copied2El.textContent = "";
 }
 
 function copyPassword1() {
@@ -177,7 +184,7 @@ function copyPassword1() {
     navigator.clipboard
       .writeText(password1) // Copy the password to the clipboard
       .then(() => {
-        alert("password copied to clipboard!");
+        copied1El.textContent = "copied meow!";
       });
   }
 }
@@ -188,7 +195,7 @@ function copyPassword2() {
     navigator.clipboard
       .writeText(password2) // Copy the password to the clipboard
       .then(() => {
-        alert("password copied to clipboard!");
+        copied2El.textContent = "copied meow!";
       });
   }
 }

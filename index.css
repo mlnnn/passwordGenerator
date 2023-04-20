@@ -65,6 +65,7 @@ html {
   transform: matrix(1, -0.02, 0.02, 1, 0, 0);
   left: 390px;
   bottom: 359px;
+  height: 0px;
 }
 
 .highlight-header {
@@ -317,6 +318,10 @@ html {
   border-color: rgb(185, 0, 0);
 }
 
+.main-gif {
+  width: 0px;
+}
+
 .gif {
   position: relative;
   top: -410px;
@@ -333,6 +338,10 @@ html {
   left: 677px;
   bottom: 384px;
   width: 0px;
+}
+
+.coded {
+  height: 0px;
 }
 
 .coded-text {
@@ -352,38 +361,23 @@ html {
   color: inherit;
 }
 
-#errorEl1 {
-  position: absolute;
-  width: 92px;
-  height: 28px;
-
-  font-family: "VT323";
+.copied {
   font-style: normal;
   font-weight: 400;
+  font-family: "VT323";
   font-size: 20px;
-  line-height: 30px;
-
-  display: flex;
-  align-items: center;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-
+  position: absolute;
+  top: 631px;
+  margin: 0;
   color: #ec0000;
 }
 
-#errorEl2 {
-  position: absolute;
-  width: 92px;
-  height: 28px;
+#copied1 {
+  left: 240.4px;
+}
 
-  font-family: "VT323";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.02em;
-
-  color: #ec0000;
+#copied2 {
+  left: 450px;
 }
